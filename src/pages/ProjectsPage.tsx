@@ -1,9 +1,11 @@
-const PageName = () => {
-    return (
-        <div className="min-h-screen">
-            Projects Page
-        </div>
-    );
+import ProjectsSection from "../sections/ProjectsSection";
+
+const ProjectsPage = () => {
+  return (
+    <div className="min-h-screen">
+      <ProjectsSection />
+    </div>
+  );
 };
 
-export default PageName;
+export default ProjectsPage;

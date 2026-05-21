@@ -6,6 +6,7 @@ import {
 } from "react-icons/fa";
 
 import type { Project } from "../../types/project";
+import { Link } from "react-router-dom";
 
 interface Props {
   project: Project;
@@ -15,7 +16,8 @@ const ProjectCard = ({
   project,
 }: Props) => {
   return (
-    <motion.div
+    <Link to={`/projects/${project.slug}`}>
+  <motion.div
       whileHover={{
         y: -8,
       }}
@@ -183,6 +185,7 @@ const ProjectCard = ({
         </div>
       </div>
     </motion.div>
+</Link>
   );
 };
 
