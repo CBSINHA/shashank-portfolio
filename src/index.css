@@ -37,6 +37,7 @@ html {
 }
 
 body {
+  overflow-x: hidden;
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
@@ -85,4 +86,11 @@ button {
 
 ::-webkit-scrollbar-track {
   background: transparent;
+}
+::selection {
+  background: rgba(99, 102, 241, 0.3);
+}
+
+img {
+  user-select: none;
 }

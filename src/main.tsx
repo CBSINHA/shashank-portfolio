@@ -15,11 +15,15 @@ import CertificatesPage from "./pages/CertificatesPage";
 import NotFoundPage from "./pages/NotFoundPage";
 
 import ThemeProvider from "./context/ThemeProvider";
+import { Toaster } from "react-hot-toast";
 
 ReactDOM.createRoot(
   document.getElementById("root")!
 ).render(
   <ThemeProvider>
+    <Toaster
+  position="top-right"
+/>
     <BrowserRouter>
       <Routes>
         <Route

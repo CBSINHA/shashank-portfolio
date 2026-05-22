@@ -18,6 +18,7 @@ const Navbar = () => {
       }}
       className="
         sticky
+        supports-[backdrop-filter]:bg-black/10
         top-0
         z-50
         backdrop-blur-xl
@@ -64,7 +65,14 @@ const Navbar = () => {
             font-medium
           "
         >
-          <a href="#about">
+          <a
+  href="#about"
+  className="
+    transition-colors
+    duration-300
+    hover:text-indigo-500
+  "
+>
             About
           </a>
 
