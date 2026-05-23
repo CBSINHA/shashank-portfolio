@@ -24,6 +24,7 @@ const StatCard = ({
         duration-300
         hover:-translate-y-2
         hover:shadow-2xl
+        shadow-lg
       "
       style={{
         background: "var(--card)",
@@ -43,15 +44,17 @@ const StatCard = ({
           bg-gradient-to-r
           from-indigo-500
           to-violet-500
+          
         "
       />
 
-      <div className="relative z-10">
+      <div className="relative z-10 ">
         <h3
           className="
             text-5xl
             font-bold
             tracking-tight
+            
           "
           style={{
             fontFamily:
@@ -67,6 +70,7 @@ const StatCard = ({
             mt-4
             text-xl
             font-semibold
+            
           "
         >
           {label}
@@ -78,6 +82,7 @@ const StatCard = ({
             leading-relaxed
             text-slate-600
             dark:text-slate-400
+            
           "
         >
           {description}

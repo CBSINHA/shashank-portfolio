@@ -18,11 +18,12 @@ const Navbar = () => {
       }}
       className="
         sticky
-        supports-[backdrop-filter]:bg-black/10
         top-0
         z-50
-        backdrop-blur-xl
         border-b
+        backdrop-blur-xl
+        supports-[backdrop-filter]:bg-black/10
+        shadow-sm
       "
       style={{
         background: "var(--card)",
@@ -41,11 +42,17 @@ const Navbar = () => {
           justify-between
         "
       >
-        <div
+        {/* LOGO */}
+
+        <a
+          href="/"
           className="
             text-xl
             font-bold
             tracking-tight
+            transition-colors
+            duration-300
+            hover:text-indigo-500
           "
           style={{
             fontFamily:
@@ -53,7 +60,9 @@ const Navbar = () => {
           }}
         >
           Shashank.
-        </div>
+        </a>
+
+        {/* NAV LINKS */}
 
         <div
           className="
@@ -66,28 +75,51 @@ const Navbar = () => {
           "
         >
           <a
-  href="#about"
-  className="
-    transition-colors
-    duration-300
-    hover:text-indigo-500
-  "
->
+            href="#about"
+            className="
+              hover:text-indigo-500
+              transition-colors
+              duration-300
+            "
+          >
             About
           </a>
 
-          <a href="#skills">
+          <a
+            href="#skills"
+            className="
+              hover:text-indigo-500
+              transition-colors
+              duration-300
+            "
+          >
             Skills
           </a>
 
-          <a href="#projects">
+          <a
+            href="#projects"
+            className="
+              hover:text-indigo-500
+              transition-colors
+              duration-300
+            "
+          >
             Projects
           </a>
 
-          <a href="#contact">
+          <a
+            href="#contact"
+            className="
+              hover:text-indigo-500
+              transition-colors
+              duration-300
+            "
+          >
             Contact
           </a>
         </div>
+
+        {/* THEME TOGGLE */}
 
         <ThemeToggle />
       </div>

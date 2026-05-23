@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
 
 import { ExternalLink } from "lucide-react";
-import {
-  FaGithub,
-} from "react-icons/fa";
+
+import { FaGithub } from "react-icons/fa";
+
+import { Link } from "react-router-dom";
 
 import type { Project } from "../../types/project";
-import { Link } from "react-router-dom";
 
 interface Props {
   project: Project;
@@ -16,10 +16,10 @@ const ProjectCard = ({
   project,
 }: Props) => {
   return (
-    <Link to={`/projects/${project.slug}`}>
-  <motion.div
+    <motion.div
       whileHover={{
         y: -8,
+        scale: 1.01,
       }}
       transition={{
         duration: 0.3,
@@ -31,6 +31,7 @@ const ProjectCard = ({
         rounded-[2rem]
         border
         backdrop-blur-xl
+        shadow-lg
       "
       style={{
         background: "var(--card)",
@@ -61,6 +62,8 @@ const ProjectCard = ({
       {/* CONTENT */}
 
       <div className="p-8">
+        {/* CATEGORY */}
+
         <div
           className="
             inline-flex
@@ -77,6 +80,8 @@ const ProjectCard = ({
           {project.category}
         </div>
 
+        {/* TITLE */}
+
         <h3
           className="
             text-3xl
@@ -89,6 +94,8 @@ const ProjectCard = ({
         >
           {project.title}
         </h3>
+
+        {/* DESCRIPTION */}
 
         <p
           className="
@@ -133,15 +140,33 @@ const ProjectCard = ({
           )}
         </div>
 
-        {/* LINKS */}
+        {/* ACTIONS */}
 
         <div
           className="
             mt-8
             flex
-            gap-4
+            flex-wrap
+            items-center
+            gap-5
           "
         >
+          <Link
+            to={`/projects/${project.slug}`}
+            className="
+              inline-flex
+              items-center
+              gap-2
+              font-medium
+              text-indigo-500
+              transition-colors
+              duration-300
+              hover:text-violet-500
+            "
+          >
+            View Details
+          </Link>
+
           {project.liveLink && (
             <a
               href={project.liveLink}
@@ -152,7 +177,9 @@ const ProjectCard = ({
                 items-center
                 gap-2
                 font-medium
-                text-indigo-500
+                transition-colors
+                duration-300
+                hover:text-indigo-500
               "
             >
               Live Demo
@@ -175,17 +202,19 @@ const ProjectCard = ({
                 items-center
                 gap-2
                 font-medium
+                transition-colors
+                duration-300
+                hover:text-indigo-500
               "
             >
               GitHub
 
-             <FaGithub size={18} />
+              <FaGithub size={18} />
             </a>
           )}
         </div>
       </div>
     </motion.div>
-</Link>
   );
 };
 

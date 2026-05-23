@@ -432,6 +432,7 @@ className="
               repeat: Infinity,
             }}
             className="
+            hidden md:block
             hover:scale-105
 transition-all
 duration-300
@@ -464,6 +465,7 @@ duration-300
               repeat: Infinity,
             }}
             className="
+            hidden md:block
             hover:scale-105
 transition-all
 duration-300

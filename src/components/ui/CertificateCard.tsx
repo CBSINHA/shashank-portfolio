@@ -25,6 +25,7 @@ const CertificateCard = ({
         duration-300
         hover:-translate-y-2
         hover:shadow-2xl
+        shadow-lg
       "
       style={{
         background: "var(--card)",
@@ -46,10 +47,11 @@ const CertificateCard = ({
           bg-gradient-to-r
           from-indigo-500
           to-violet-500
+          
         "
       />
 
-      <div className="relative z-10">
+      <div className="relative z-10 ">
         <div
           className="
             w-14
@@ -60,6 +62,7 @@ const CertificateCard = ({
             justify-center
             bg-indigo-500/10
             text-indigo-500
+            
           "
         >
           <Award size={28} />
@@ -70,6 +73,7 @@ const CertificateCard = ({
             mt-6
             text-2xl
             font-bold
+            
           "
           style={{
             fontFamily:
@@ -84,6 +88,7 @@ const CertificateCard = ({
             mt-3
             text-indigo-500
             font-medium
+            
           "
         >
           {certificate.issuer}
@@ -95,6 +100,7 @@ const CertificateCard = ({
             leading-relaxed
             text-slate-600
             dark:text-slate-400
+            
           "
         >
           {certificate.description}
@@ -106,12 +112,14 @@ const CertificateCard = ({
             flex
             items-center
             justify-between
+            
           "
         >
           <span
             className="
               text-sm
               text-slate-500
+              
             "
           >
             {certificate.issueDate}
@@ -129,6 +137,7 @@ const CertificateCard = ({
               gap-2
               text-indigo-500
               font-medium
+              
             "
           >
             Verify

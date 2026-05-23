@@ -12,6 +12,11 @@ import { projects } from "../data/projects";
 import Section from "../components/layout/Section";
 
 import TechBadge from "../components/ui/TechBadge";
+import Navbar from "../components/layout/Navbar";
+
+import Footer from "../components/layout/Footer";
+
+import { Link } from "react-router-dom";
 
 const ProjectDetailsPage = () => {
   const { slug } = useParams();
@@ -38,11 +43,12 @@ const ProjectDetailsPage = () => {
 
   return (
     <div className="min-h-screen">
+  <Navbar />
       {/* HERO */}
 
       <Section className="pt-16">
-        <a
-          href="/projects"
+        <Link
+  to="/projects"
           className="
             inline-flex
             items-center
@@ -54,7 +60,7 @@ const ProjectDetailsPage = () => {
         >
           <ArrowLeft size={18} />
           Back to Projects
-        </a>
+        </Link>
 
         <div
           className="
@@ -325,6 +331,7 @@ const ProjectDetailsPage = () => {
           </div>
         </div>
       </Section>
+      <Footer />
     </div>
   );
 };

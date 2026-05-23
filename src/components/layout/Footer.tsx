@@ -43,15 +43,30 @@ const Footer = () => {
             text-sm
           "
         >
-          <a href="#about">
+          <a href="#about"
+          className="
+  hover:text-indigo-500
+  transition-colors
+  duration-300
+">
             About
           </a>
 
-          <a href="#projects">
+          <a href="#projects"
+          className="
+  hover:text-indigo-500
+  transition-colors
+  duration-300
+">
             Projects
           </a>
 
-          <a href="#contact">
+          <a href="#contact"
+          className="
+  hover:text-indigo-500
+  transition-colors
+  duration-300
+">
             Contact
           </a>
         </div>
